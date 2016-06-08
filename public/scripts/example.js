@@ -65,61 +65,61 @@
 //    document.getElementById('content')
 // );
 
-var main = [
- {id: 1, name: "Nata"},
- {id: 2, name: "Rita"}
-];
-
-var add = [
- {id: 1, sex: 'female', age: "30"},
- {id: 2, sex: 'female', age: "25"}
-];
-
-var Child = React.createClass ({
-  render: function() {
-    return (
-      <div className="box">
-        <span className="box__id">{this.props.id}. </span>
-        <span className="box__name">{this.props.name} </span>
-      </div>
-    );
-  }
-});
-
-var Child2 = React.createClass ({
-  render: function() {
-    return (
-      <div className="box">
-        <span className="box__id">{this.props.id}. </span>
-        <span className="box__sex">{this.props.sex}. </span>
-        <span className="box__age">{this.props.age} </span>
-      </div>
-    );
-  }
-});
-
-var Parent = React.createClass({
-  render: function() {
-    var parentName = this.props.name.map(function(el) {
-      return (
-          <Child id={el.id} name={el.name} key={el.id}/>
-      );
-    });
-    var parentInfo = this.props.inf.map(function(el) {
-      return (
-        <Child2 sex={el.sex} age={el.age} key={el.id}/>
-      );
-    });
-    return (
-      <div className="boxList">
-        {parentName}
-        {parentInfo}
-      </div>
-    )
-  }
-});
-
-ReactDOM.render(
-   <Parent name={main} inf={add}/>,
-   document.getElementById('content')
-);
+//var main = [
+// {id: 1, name: "Nata"},
+// {id: 2, name: "Rita"}
+//];
+//
+//var add = [
+// {id: 1, sex: 'female', age: "30"},
+// {id: 2, sex: 'female', age: "25"}
+//];
+//
+//var Child = React.createClass ({
+//  render: function() {
+//    return (
+//      <div className="box">
+//        <span className="box__id">{this.props.id}. </span>
+//        <span className="box__name">{this.props.name} </span>
+//      </div>
+//    );
+//  }
+//});
+//
+//var Child2 = React.createClass ({
+//  render: function() {
+//    return (
+//      <div className="box">
+//        <span className="box__id">{this.props.id}. </span>
+//        <span className="box__sex">{this.props.sex}. </span>
+//        <span className="box__age">{this.props.age} </span>
+//      </div>
+//    );
+//  }
+//});
+//
+//var Parent = React.createClass({
+//  render: function() {
+//    var parentName = this.props.name.map(function(el) {
+//      return (
+//          <Child id={el.id} name={el.name} key={el.id}/>
+//      );
+//    });
+//    var parentInfo = this.props.inf.map(function(el) {
+//      return (
+//        <Child2 sex={el.sex} age={el.age} key={el.id}/>
+//      );
+//    });
+//    return (
+//      <div className="boxList">
+//        {parentName}
+//        {parentInfo}
+//      </div>
+//    )
+//  }
+//});
+//
+//ReactDOM.render(
+//   <Parent name={main} inf={add}/>,
+//   document.getElementById('content')
+//);

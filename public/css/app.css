@@ -1,0 +1,13 @@
+.item__el {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.item__img {
+  margin-right: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
