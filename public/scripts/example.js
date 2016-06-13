@@ -1,5 +1,5 @@
-//example
-
+////example
+//
 // var data = [
 //  {id: 1, author: "Rita", text: "бла бла..."},
 //  {id: 2, author: "Anton", text: "ыгыгы"}
@@ -45,26 +45,26 @@
 //    document.getElementById('content')
 // );
 
-
-// var name = 'Nata';
 //
-// var Name = React.createClass({
+//// var name = 'Nata';
+////
+//// var Name = React.createClass({
+////
+////  render: function() {
+////    return (
+////        <div className="name">
+////          {this.props.node}
+////        </div>
+////    );
+////  }
+//// });
+////
+////
+//// ReactDOM.render(
+////    <Name node={name} />,
+////    document.getElementById('content')
+//// );
 //
-//  render: function() {
-//    return (
-//        <div className="name">
-//          {this.props.node}
-//        </div>
-//    );
-//  }
-// });
-//
-//
-// ReactDOM.render(
-//    <Name node={name} />,
-//    document.getElementById('content')
-// );
-
 //var main = [
 // {id: 1, name: "Nata"},
 // {id: 2, name: "Rita"}
