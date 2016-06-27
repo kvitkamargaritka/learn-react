@@ -26,21 +26,21 @@ body {
 }
 
 .btn {
-  border-radius: 3px;
+  border: none;
+  background: #fe6600;
   color: #fff;
+  margin: 5px 0;
   padding: 5px 10px;
   cursor: pointer;
 }
 
-.btn_green {
+.btn.is-green {
   background-color: #4BBE3F;
-  border-bottom: 3px solid #3A9731;
 }
 
 .btn_white {
   width: 125px;
   background-color: #F8F8F8;
-  border-bottom: 3px solid #C1C1C1;
   color: #3e77aa;
 }
 
