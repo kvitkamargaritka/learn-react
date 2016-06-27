@@ -27,20 +27,16 @@ body {
 
 .btn {
   border: none;
-  background: #fe6600;
+  background-color: #4BBE3F;
   color: #fff;
   margin: 5px 0;
   padding: 5px 10px;
   cursor: pointer;
 }
 
-.btn.is-green {
-  background-color: #4BBE3F;
-}
-
-.btn_white {
+.btn.is-white {
   width: 125px;
-  background-color: #F8F8F8;
+  background-color: #eee;
   color: #3e77aa;
 }
 

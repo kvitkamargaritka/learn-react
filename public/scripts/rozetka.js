@@ -21,8 +21,8 @@ var data = [
     isCommented: true,
     comments: 0,
     isAvailable: true,
-    memory: 4,
-    hdd: 128,
+    memory: '4 ГБ',
+    hdd: '128 ГБ',
     hot: true,
     description: 'Экран 13.3" (1440x900) WXGA+ LED, глянцевый / Intel Core i5 (1.6 - 2.7 ГГц) / RAM 4 ГБ / SSD 128 ГБ / Intel HD Graphics 6000 / без ОД / Wi-Fi / Bluetooth / веб-камера / OS X Yosemite / 1.35 кг'
   },
@@ -35,14 +35,12 @@ var data = [
     isCommented: false,
     comments: 18,
     isAvailable: false,
-    memory: 8,
-    hdd: 128,
+    memory: '8 ГБ',
+    hdd: '128 ГБ',
     hot: false,
     description: 'Экран 13.3" IPS (2560x1600) Retina LED, глянцевый / Intel Core i5 (2.7 ГГц) / RAM 8 ГБ / SSD 128 ГБ / Intel Iris Graphics 6100 / без ОД / Wi-Fi / Bluetooth / веб-камера / OS X Yosemite / 1.58 кг'
   }
 ];
-
-
 
 var ItemList = React.createClass({
   render: function() {
@@ -57,6 +55,7 @@ var ItemList = React.createClass({
               description={el.description}
               isMany={el.isMany}
               hot={el.hot}
+              available={el.isAvailable}
               key={el.id}/>
       );
     });
@@ -81,9 +80,8 @@ var Item = React.createClass ({
 
         {this.props.isMany < 10 ? <IsMany amount={this.props.isMany} /> : null}
 
-        <Btn color={this.props.hot}/>
-
-        <span className="item__comments">{this.props.comments} отзывов</span>
+        <Btn color={this.props.hot} available={this.props.available}/>
+        <Comments amount={this.props.comments} />
         <p className="item__memory">{this.props.memory} </p>
         <p className="item__hdd">{this.props.hdd} </p>
         <p className="item__descr">{this.props.description} </p>
@@ -98,12 +96,23 @@ var Btn = React.createClass ({
     var cls = 'btn ';
 
     return (
-      <button className={this.props.color ? cls : cls + 'is-green'}>
-        Купить
-      </button>
+      <div className="block">
+        {!this.props.available ?
+        <button className={this.props.color ? cls : cls + 'is-white'}>
+          Сообщите, когда появится
+        </button>
+        :
+        <button className={cls}>
+          Купить
+        </button>
+        }
+      </div>
+
     );
   }
 });
+
+
 
 var IsMany = React.createClass ({
   render: function () {
@@ -119,6 +128,22 @@ var IsMany = React.createClass ({
     );
   }
 });
+
+var Comments = React.createClass ({
+  render: function () {
+
+    return (
+      <div className="is-comments">
+        {this.props.amount > 0 ?
+        <span className="item__comments">{this.props.amount} отзывов</span>
+        :
+        <span className="item__comments">Оставить отзыв</span>
+        }
+      </div>
+    );
+  }
+});
+
 
 
 
